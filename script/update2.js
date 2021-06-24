@@ -31,16 +31,6 @@ let clrInputs = () => {
 }
 
 
-// //error msg output
-// let err = (flag) => {
-//     if(!flag){
-//         alert("Invalid Item Name")
-//     }
-// }
 
-
-
-
-//event listeners
 let addItemBtn = document.getElementById("addBtn")
 addItemBtn.addEventListener("click", updateQuantity)

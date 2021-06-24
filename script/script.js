@@ -20,35 +20,9 @@ let iniGroup = () => {
                 description: "Azar Paint",
                 category: "ACCESSORY",
                 quantity: 70
-            },
+            }
 
-            {
-                itemName: "Hacksaw Blade",
-                description: "Cutting Tool",
-                category: "HARDWARE",
-                quantity: 60
-            },
-
-            {
-                itemName: "Hacksaw Blade",
-                description: "Cutting Tool",
-                category: "HARDWARE",
-                quantity: 60
-            },
-
-            {
-                itemName: "Hacksaw Blade",
-                description: "Cutting Tool",
-                category: "HARDWARE",
-                quantity: 60
-            },
-
-            {
-                itemName: "Hacksaw Blade",
-                description: "Cutting Tool",
-                category: "HARDWARE",
-                quantity: 60
-            },
+        
 
 
         ]
@@ -64,12 +38,22 @@ iniGroup()
 
 document.getElementById("totalItems").innerHTML = retrievedArray.length
     document.getElementById("numberOfCategories").innerHTML = 2
-    let inStock = document.getElementById("itemsInStock")
+    let itemStock = document.getElementById("itemsInStock")
     let count = 0
     for(let i = 0; i<retrievedArray.length; i++){
         count += retrievedArray[i].quantity
     }
-    inStock.innerHTML = count
+    itemStock.innerHTML = count
+
+
+toggleMe = () => {
+    let toggle = document.querySelector('.toggle')
+    let sidebar_menu = document.querySelector('.sidebar-menu')
+    let content = document.querySelector('.content')
+    toggle.classList.toggle('active');
+    sidebar_menu.classList.toggle('active');
+    content.classList.toggle ('active');
+}
 
 
 
@@ -112,4 +96,5 @@ for (let i = 0; i < retrievedArray.length; i++) {
         // indicators[i].innerHTML = "In stock"
     }
 }
+
 }

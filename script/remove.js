@@ -29,12 +29,7 @@ let clearInputs = () => {
 }
 
 
-// //error msg output
-// let err = (flag) => {
-//     if(!flag){
-//         alert("Invalid Item Name")
-//     }
-// }
+
 
 
 
