@@ -20,7 +20,37 @@ let iniGroup = () => {
                 description: "Azar Paint",
                 category: "ACCESSORY",
                 quantity: 70
-            }
+            },
+
+            {
+                itemName: "Hacksaw Blade",
+                description: "Cutting Tool",
+                category: "HARDWARE",
+                quantity: 60
+            },
+
+            {
+                itemName: "Hacksaw Blade",
+                description: "Cutting Tool",
+                category: "HARDWARE",
+                quantity: 60
+            },
+
+            {
+                itemName: "Hacksaw Blade",
+                description: "Cutting Tool",
+                category: "HARDWARE",
+                quantity: 60
+            },
+
+            {
+                itemName: "Hacksaw Blade",
+                description: "Cutting Tool",
+                category: "HARDWARE",
+                quantity: 60
+            },
+
+
         ]
         localStorage.setItem(0, JSON.stringify(inputsArray));
     }
@@ -30,6 +60,16 @@ let retrievedEntries = localStorage.getItem(0);
 let retrievedArray = JSON.parse(retrievedEntries);
 
 iniGroup()
+
+
+document.getElementById("totalItems").innerHTML = retrievedArray.length
+    document.getElementById("numberOfCategories").innerHTML = 2
+    let inStock = document.getElementById("itemsInStock")
+    let count = 0
+    for(let i = 0; i<retrievedArray.length; i++){
+        count += retrievedArray[i].quantity
+    }
+    inStock.innerHTML = count
 
 
 
