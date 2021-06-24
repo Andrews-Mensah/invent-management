@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Remove </title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            INVENTORY MANAGEMENT
+        </header>
+        <div class="d-container">
+            <div class="sidebar-menu">
+                <div class="upper-sidebar">
+                    <img src="img/user-photo.png" alt="">
+                    <h4>
+                        User
+                    </h4>
+                </div>
+                <div class="lower-sidebar">
+                    <ul>
+                        <li> <a href="index.html"> <i class="zmdi zmdi-view-dashboard"> </i> Dashboard </a></li>
+                        <li><a href="additem.html">Add Item</a></li>
+                        <li><a href="update2.html">Update Quantity</a></li>
+                        <li><a href="update.html">Update Item Details</a></li>
+                        <li><a href="remove.html">Remove Item</a></li>
+
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="dashHeader"></div>
+                <div class="dashBody">
+                    <div class="content-top">
+                        <a href=""> <i class="zmdi zmdi-menu"></i> </a>
+                 
+                        <a href="" class="log-out-logo"> <i class="zmdi zmdi-power"></i> Log Out </a>
+                    </div>
+                    <div class="inputArea">
+                        <h4 style="text-align: center; font-size: 2rem; font-weight: bolder;">
+                            Remove Item
+                        </h4>
+                        <form action="" onsubmit="return false">
+                            <input type="text" name="itemName" id="itemName" placeholder="Item Name" />
+                            <button type="submit" id="addBtn">Remove Item</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+        <h1>
+            THIS IS THE FOOTER
+        </h1>
+    </footer> -->
+
+<script src="script/remove.js"></script>
+</body>
+</html>
