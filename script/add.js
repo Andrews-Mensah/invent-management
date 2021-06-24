@@ -1,8 +1,8 @@
-let retrievedData = localStorage.getItem(0);
-let retrievedArray = JSON.parse(retrievedData);
+let retrievedEntries = localStorage.getItem(0);
+let retrievedArray = JSON.parse(retrievedEntries);
 
 //clear inputs
-let clearInputs = () => {
+let clrInputs = () => {
     let inputs = document.getElementsByTagName("input")
     for (x of inputs) {
         x.value = ""
@@ -11,7 +11,7 @@ let clearInputs = () => {
 
 
 
-let addItem = () => {
+let addItems = () => {
     let inputs = document.getElementsByTagName("input")
     const itemName = inputs[0].value.toUpperCase()
     const description = inputs[1].value.toUpperCase()
@@ -19,24 +19,24 @@ let addItem = () => {
     const category = document.getElementById("category").value
 
     if (itemName == "" || description == "" || quantity < 0) {
-        alert("Fill in the empty fields")
+        alert("Please Give Valid Details")
         return
     } else {
-        let inputsObj = {
+        let inputsObjects = {
             itemName,
             description,
             category,
             quantity
         }
-        retrievedArray.push(inputsObj)
+        retrievedArray.push(inputsObjects)
         localStorage.setItem(0, JSON.stringify(retrievedArray));
     }
     
-    clearInputs()
+    clrInputs()
 }
 
 
 
 
 let addItemBtn = document.getElementById("addBtn")
-addItemBtn.addEventListener("click", addItem)
+addItemBtn.addEventListener("click", addItems)
