@@ -3,8 +3,8 @@ let retrievedArray = JSON.parse(retrievedData);
 
 let updateQuantity = () => {
     let inputs = document.getElementsByTagName("input")
-    const itemName = inputs[0].value.toUpperCase()
-    const quantity = inputs[1].value.toUpperCase()
+    const itemName = inputs[0].value
+    const quantity = inputs[1].value
 
 
     let found = false;
@@ -15,14 +15,14 @@ let updateQuantity = () => {
         }
     }
     localStorage.setItem(0, JSON.stringify(retrievedArray));
-    clearInputs()
-    err(found)
+    clrInputs()
+    // err(found)
 }
 
 
 
 //clear inputs
-let clearInputs = () => {
+let clrInputs = () => {
     let inputs = document.getElementsByTagName("input")
     for (x of inputs) {
         x.value = ""
@@ -31,11 +31,11 @@ let clearInputs = () => {
 
 
 
-let err = (flag) => {
-    if(!flag){
-        alert("Invalid Item Name")
-    }
-}
+// let err = (flag) => {
+//     if(!flag){
+//         alert("Invalid Item Name")
+//     }
+// }
 
 
 

@@ -1,4 +1,6 @@
 
+window.onload = function (){
+
 let iniGroup = () => {
     if (localStorage.getItem(0) === null) {
         let inputsArray = [{
@@ -24,15 +26,15 @@ let iniGroup = () => {
     }
 }
 
-let retrievedData = localStorage.getItem(0);
-let retrievedArray = JSON.parse(retrievedData);
+let retrievedEntries = localStorage.getItem(0);
+let retrievedArray = JSON.parse(retrievedEntries);
 
 iniGroup()
 
 
 
 const data = document.getElementById('tableBody')
-const displayData = (arr, count) => {
+const displayEntries = (arr, count) => {
     const tr = document.createElement('tr')
     tr.className = 'tableRow'
     tr.innerHTML = `
@@ -48,7 +50,7 @@ const displayData = (arr, count) => {
 }
 
 for (let i = 0; i < retrievedArray.length; i++) {
-    displayData(retrievedArray, i)
+    displayEntries(retrievedArray, i)
 }
 
 
@@ -69,4 +71,5 @@ for (let i = 0; i < retrievedArray.length; i++) {
         indicators[i].classList.add("green")
         // indicators[i].innerHTML = "In stock"
     }
+}
 }

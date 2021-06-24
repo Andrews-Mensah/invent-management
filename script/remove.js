@@ -1,9 +1,9 @@
-let retrievedData = localStorage.getItem(0);
-let retrievedArray = JSON.parse(retrievedData);
+let retrievedEntries = localStorage.getItem(0);
+let retrievedArray = JSON.parse(retrievedEntries);
 
 let updateQuantity = () => {
     let inputs = document.getElementsByTagName("input")
-    const itemName = inputs[0].value.toUpperCase()
+    const itemName = inputs[0].value
 
 
     let found = false;
@@ -29,12 +29,12 @@ let clearInputs = () => {
 }
 
 
-//error msg output
-let err = (flag) => {
-    if(!flag){
-        alert("Invalid Item Name")
-    }
-}
+// //error msg output
+// let err = (flag) => {
+//     if(!flag){
+//         alert("Invalid Item Name")
+//     }
+// }
 
 
 

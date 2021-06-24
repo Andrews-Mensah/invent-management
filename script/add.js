@@ -13,8 +13,8 @@ let clrInputs = () => {
 
 let addItems = () => {
     let inputs = document.getElementsByTagName("input")
-    const itemName = inputs[0].value.toUpperCase()
-    const description = inputs[1].value.toUpperCase()
+    const itemName = inputs[0].value
+    const description = inputs[1].value
     const quantity = parseInt(inputs[2].value)
     const category = document.getElementById("category").value
 
