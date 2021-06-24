@@ -14,8 +14,8 @@ let iniGroup = () => {
                 quantity: 60
             },
             {
-                itemName: "AZAR PAINT",
-                description: "AZAR PAINT",
+                itemName: "Azar Paint",
+                description: "Azar Paint",
                 category: "ACCESSORY",
                 quantity: 70
             }
